@@ -3888,3 +3888,30 @@ class Quebecoin(AuxPowMixin, Coin):
     TX_PER_BLOCK = 20
     REORG_LIMIT = 2000
     RPC_PORT = 10890
+
+class Sprint(Coin):
+    NAME = "Sprint"
+    SHORTNAME = "SPRX"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("02fe52cc")
+    XPRV_VERBYTES = bytes.fromhex("02fe52f8")
+    GENESIS_HASH = ('000008727242e05ff03271acbb96dee8'
+                    '1385e662845353e50618cff84f314253')
+    P2PKH_VERBYTE = bytes.fromhex("4c")
+    P2SH_VERBYTES = [bytes.fromhex("10")]
+    WIF_BYTE = bytes.fromhex("cc")
+    TX_COUNT_HEIGHT = 1
+    TX_COUNT = 1
+    TX_PER_BLOCK = 20
+    RPC_PORT = 5558
+    PEERS = [
+        ]
+    SESSIONCLS = DashElectrumX
+    DAEMON = daemon.DashDaemon
+    DESERIALIZER = lib_tx_dash.DeserializerDash
+
+    @classmethod
+    def header_hash(cls, header):
+        '''Given a header return the hash.'''
+        import x11_hash
+        return x11_hash.getPoWHash(header)
