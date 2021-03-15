@@ -3893,13 +3893,13 @@ class Sprint(Coin):
     NAME = "Sprint"
     SHORTNAME = "SPRX"
     NET = "mainnet"
-    XPUB_VERBYTES = bytes.fromhex("02fe52cc")
-    XPRV_VERBYTES = bytes.fromhex("02fe52f8")
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
     GENESIS_HASH = ('000008727242e05ff03271acbb96dee8'
                     '1385e662845353e50618cff84f314253')
-    P2PKH_VERBYTE = bytes.fromhex("4c")
-    P2SH_VERBYTES = [bytes.fromhex("10")]
-    WIF_BYTE = bytes.fromhex("cc")
+    P2PKH_VERBYTE = bytes.fromhex("3f")
+    P2SH_VERBYTES = [bytes.fromhex("12")]
+    WIF_BYTE = bytes.fromhex("4b")
     TX_COUNT_HEIGHT = 1
     TX_COUNT = 1
     TX_PER_BLOCK = 20
