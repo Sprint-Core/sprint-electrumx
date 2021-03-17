@@ -3913,5 +3913,5 @@ class Sprint(Dash):
     @classmethod
     def header_hash(cls, header):
         '''Given a header return the hash.'''
-        import x11_hash
-        return x11_hash.getPoWHash(header)
+        import bell_yespower
+        return bell_yespower.getPoWHash(header)
