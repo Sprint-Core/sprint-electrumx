@@ -3889,7 +3889,7 @@ class Quebecoin(AuxPowMixin, Coin):
     REORG_LIMIT = 2000
     RPC_PORT = 10890
 
-class Sprint(Coin):
+class Sprint(Dash):
     NAME = "Sprint"
     SHORTNAME = "SPRX"
     NET = "mainnet"
