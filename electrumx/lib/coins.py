@@ -3908,8 +3908,7 @@ class Sprint(Dash):
         ]
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.DashDaemon
-    DESERIALIZER = lib_tx_dash.DeserializerDash
-
+    
     @classmethod
     def header_hash(cls, header):
         '''Given a header return the hash.'''
