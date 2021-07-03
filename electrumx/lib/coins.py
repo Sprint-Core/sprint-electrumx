@@ -3890,7 +3890,7 @@ class Quebecoin(AuxPowMixin, Coin):
     RPC_PORT = 10890
 
 class Sprint(Dash):
-    NAME = "Sprint"
+    NAME = "sprint"
     SHORTNAME = "SPRX"
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("0488b21e")
@@ -3908,7 +3908,8 @@ class Sprint(Dash):
         ]
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.DashDaemon
-    
+    DESERIALIZER = lib_tx_dash.DeserializerDash
+
     @classmethod
     def header_hash(cls, header):
         '''Given a header return the hash.'''
