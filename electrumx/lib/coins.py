@@ -3889,7 +3889,7 @@ class Quebecoin(AuxPowMixin, Coin):
     REORG_LIMIT = 2000
     RPC_PORT = 10890
 
-class Sprint(Dash):
+class Sprint(Coin):
     NAME = "sprint"
     SHORTNAME = "SPRX"
     NET = "mainnet"
@@ -3900,18 +3900,17 @@ class Sprint(Dash):
     P2PKH_VERBYTE = bytes.fromhex("3f")
     P2SH_VERBYTES = [bytes.fromhex("12")]
     WIF_BYTE = bytes.fromhex("4b")
-    TX_COUNT_HEIGHT = 1
-    TX_COUNT = 1
+    TX_COUNT_HEIGHT = 200000
+    TX_COUNT = 25000
     TX_PER_BLOCK = 20
     RPC_PORT = 5558
     PEERS = [
         ]
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.DashDaemon
-    DESERIALIZER = lib_tx_dash.DeserializerDash
 
-#    @classmethod
-#    def header_hash(cls, header):
-#        '''Given a header return the hash.'''
-#        import bell_yespower
-#        return bell_yespower.getPoWHash(header)
+    @classmethod
+    def header_hash(cls, header):
+        '''Given a header return the hash.'''
+        import bell_yespower
+        return bell_yespower.getPoWHash(header)
