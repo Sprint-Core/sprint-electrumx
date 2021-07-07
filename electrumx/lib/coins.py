@@ -3910,8 +3910,8 @@ class Sprint(Dash):
     DAEMON = daemon.DashDaemon
     DESERIALIZER = lib_tx_dash.DeserializerDash
 
-    @classmethod
-    def header_hash(cls, header):
-        '''Given a header return the hash.'''
-        import bell_yespower
-        return bell_yespower.getPoWHash(header)
+#    @classmethod
+#    def header_hash(cls, header):
+#        '''Given a header return the hash.'''
+#        import bell_yespower
+#        return bell_yespower.getPoWHash(header)
