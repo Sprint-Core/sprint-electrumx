@@ -3900,15 +3900,15 @@ class Sprint(Coin):
     P2PKH_VERBYTE = bytes.fromhex("3f")
     P2SH_VERBYTES = [bytes.fromhex("12")]
     WIF_BYTE = bytes.fromhex("4b")
-    TX_COUNT_HEIGHT = 200000
-    TX_COUNT = 25000
-    TX_PER_BLOCK = 20
+    TX_COUNT_HEIGHT = 250000
+    TX_COUNT = 2
+    TX_PER_BLOCK = 5
     RPC_PORT = 5558
     PEERS = [
         ]
-    SESSIONCLS = DashElectrumX
-    DAEMON = daemon.DashDaemon
-    DESERIALIZER = lib_tx_dash.DeserializerDash
+#    SESSIONCLS = DashElectrumX
+#    DAEMON = daemon.DashDaemon
+     DESERIALIZER = lib_tx_dash.DeserializerDash
 
     @classmethod
     def header_hash(cls, header):
