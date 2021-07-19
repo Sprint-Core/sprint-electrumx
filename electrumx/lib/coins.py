@@ -3906,9 +3906,9 @@ class Sprint(Coin):
     RPC_PORT = 5558
     PEERS = [
         ]
-#    SESSIONCLS = DashElectrumX
-#    DAEMON = daemon.DashDaemon
-     DESERIALIZER = lib_tx_dash.DeserializerDash
+    SESSIONCLS = DashElectrumX
+    DAEMON = daemon.DashDaemon
+#    DESERIALIZER = lib_tx_dash.DeserializerDash
 
     @classmethod
     def header_hash(cls, header):
